@@ -1,26 +1,38 @@
-@import '_normalize.scss';
+/* By Athlon Front-End Team */
 
-// primary color
-$dark-violet: hsl(256, 26%, 20%);
-$grayish-blue: hsl(216, 30%, 68%);
-// Neutral color
-$very-dark-violet: hsl(270, 9%, 17%);
-$dark-grayish-violet: hsl(273, 4%, 51%);
-$very-light-gray: hsl(0, 0%, 98%);
-$white: #fff;
+/* Core variables */
+@import 'base/vars';
+
+/* CSS Reset */
+@import 'base/reset';
+
+/* CSS print */
+@import 'base/print';
+
+/* Fonts */
+@import 'base/fonts';
+
+/* Mixins, helpers and functions */
+@import 'base/mixins';
+
+/* Vendor */
+
+/* Components */
+
+/* Browser specific styles */
+@import 'dirty/hacks';
 
 *{
-  margin: 0;
   padding: 0;
+  margin: 0;
+  outline: none;
 }
-ul li {
-  list-style-type: none;
+button {
+  border: none;
 }
 a {
-  text-decoration: none;
   color: $dark-violet;
 }
-
 body {
   font-family: 'Karla';
   font-size: 16px;
@@ -48,7 +60,7 @@ header {
   position: fixed;
   width: 100%;
   max-width: 768px;
-  transition: all .5s;
+  // transition: all .5s;
   &.active {
     height: 100vh;
 
@@ -85,7 +97,7 @@ header {
     padding-bottom: 4px;
     text-align: center;
     background-color: $dark-violet;
-    background-image: url(../images/bg-pattern-mobile-nav.svg);
+    background-image: url(../images/content//bg-pattern-mobile-nav.svg);
     background-repeat: no-repeat;
     background-position-y: calc(100vh - 310px);
     background-position-x: right;

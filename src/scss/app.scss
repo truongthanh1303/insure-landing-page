@@ -198,10 +198,16 @@ header {
   padding: 0.875rem 1.875rem;
   text-transform: uppercase;
   background-color: transparent;
+  cursor: pointer;
 
   &.btn-default {
     border: 2px solid $very-light-gray;
     color: $very-light-gray;
+
+    &:hover {
+      background-color: $very-light-gray;
+      color: $dark-violet;
+    }
   }
 }
 
@@ -237,10 +243,18 @@ header {
             color: $dark-violet;
           }
           &.active {
-            background-color: $dark-violet;
+            border: 2px solid $dark-violet;
+            
+            &:hover {
+              background-color: $dark-violet;
 
+              a {
+                color: $very-light-gray;
+              }
+            }
+            
             a {
-              color: $very-light-gray;
+              color: $dark-violet;
             }
           }
         }

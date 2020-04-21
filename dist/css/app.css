@@ -341,10 +341,14 @@ header {
 .btn {
   padding: 0.875rem 1.875rem;
   text-transform: uppercase;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
   .btn.btn-default {
     border: 2px solid #fafafa;
     color: #fafafa; }
+    .btn.btn-default:hover {
+      background-color: #fafafa;
+      color: #2d2640; }
 
 @media (min-width: 768px) {
   .container {
@@ -367,9 +371,13 @@ header {
           header .nav-bar-desktop ul li:hover:not(.active) a {
             color: #2d2640; }
           header .nav-bar-desktop ul li.active {
-            background-color: #2d2640; }
+            border: 2px solid #2d2640; }
+            header .nav-bar-desktop ul li.active:hover {
+              background-color: #2d2640; }
+              header .nav-bar-desktop ul li.active:hover a {
+                color: #fafafa; }
             header .nav-bar-desktop ul li.active a {
-              color: #fafafa; }
+              color: #2d2640; }
       header .nav-bar-desktop a {
         color: #837d87;
         text-transform: uppercase; }

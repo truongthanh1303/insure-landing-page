@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Insure landing page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Serif+Display">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+  </head>
+  <body>
+    <header>
+      <div class="top-header container">
+        <div class="logo">
+          <img src="src/images/logo.svg" alt="Insure logo">
+        </div>
+        <div class="nav-bar-desktop">
+          <ul>
+            <li><a href="#">How we work</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Account</a></li>
+            <li class="active"><a href="#">View Plan</a></li>
+          </ul>
+        </div>
+        <button class="nav-bar-btn" id="toggle-menu">
+          <img src="src/images/icon-hamburger.svg" alt="menu">
+        </button>
+      </div>
+      <div class="nav-bar-mobile">
+        <ul>
+          <li><a href="#">How we work</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Account</a></li>
+          <li class="active"><a href="#">View Plan</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <script>
+      var toggleMenuBtn = document.getElementById('toggle-menu');
+      var menuIcon = toggleMenuBtn.getElementsByTagName('img')[0];
+      var header = document.getElementsByTagName('header')[0];
+      toggleMenuBtn.onclick = function() {
+        header.classList.toggle('active');
+        console.log(header.classList)
+        const iconSrc = !header.classList.value.indexOf('active') ?
+          'src/images/icon-close.svg' :
+          'src/images/icon-hamburger.svg'
+        menuIcon.setAttribute('src', iconSrc)
+        
+      }
+
+      window.onresize = function() {
+
+      }
+    </script>
+  </body>
+</html>

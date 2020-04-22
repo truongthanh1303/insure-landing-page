@@ -383,6 +383,15 @@ header {
         text-transform: uppercase; }
   .intro {
     padding: 70px 65px 0 65px; }
+    .intro::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 160px;
+      left: 65px;
+      width: 120px;
+      height: 2px;
+      background-color: #fafafa; }
     .intro .intro-text {
       text-align: left;
       padding: 0; }
@@ -409,6 +418,9 @@ header {
       max-width: 355px; } }
 
 @media (min-width: 992px) {
+  .intro::before {
+    top: 190px;
+    left: 165px; }
   .intro .intro-image {
     float: right;
     margin-left: 2rem;

@@ -253,6 +253,36 @@ header {
   }
 }
 
+.find-out-more {
+  background-color: $dark-violet;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 176px;
+    height: 317px;
+    top: 0;
+    right: 0;
+    background: url(../images/content/bg-pattern-how-we-work-mobile.svg) center no-repeat;
+    z-index: -1;
+  }
+
+  h1 {
+    color: $very-light-gray;
+    margin-bottom: 1.5rem;
+    z-index: 1;
+  }
+
+  .btn {
+    z-index: 1;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     margin: 0 65px;
@@ -376,6 +406,30 @@ header {
       img {
         margin: 0;
       }
+    }
+  }
+
+  .find-out-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    h1 {
+      margin-bottom: 0;
+      width: 350px;
+    }
+
+    .btn {
+      z-index: 1;
+    }
+
+    &::after {
+      background-image: url(../images/content/bg-pattern-how-we-work-desktop.svg);
+      width: 434px;
+      height: 250px;
     }
   }
 }
